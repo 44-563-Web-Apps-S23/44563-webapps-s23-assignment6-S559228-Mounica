@@ -20,7 +20,7 @@
 </form>
 <br>
 <div class="container">
-    <img src="lilac.jpg" alt="lilac plant" height="100px" width="100px" onclick="selectImage()">
+    <img src="lilac.jpg" id="img" alt="lilac plant" height="100px" width="100px" onclick="selectImage()">
 </div>
 
 <p id="result">Result </p>
@@ -29,7 +29,7 @@
 <script> 
 var good=0
 var oops=0
-var useImage=1
+useImage=1
 function checkPainter(){
     console.log("Getting form values")
     password = document.getElementById("password").value
@@ -49,18 +49,18 @@ function checkPainter(){
 }
 
 function selectImage(){
-    switch(useImage){
+    switch (useImage){
         case 1:
-            useImage=useImage+1;
-            image.src="lilac.jpg";
+            useImage=useImage+1
+            img.src="lilac.jpg";
             break;
         case 2:
-            useImage=useImage+1;;
-            image.src="million_gold.jpg";
+            useImage=useImage+1
+            img.src="million_gold.jpg";
             break;
         case 3:
-            useImage=useImage+1;;
-            image.src="redbud.jpeg";
+            useImage=useImage+1
+            img.src="redbud.jpeg";
             break;
     }
 }
