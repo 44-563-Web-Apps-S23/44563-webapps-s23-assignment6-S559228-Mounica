@@ -15,12 +15,12 @@
     <label for="form_check">Guess the painter</label>
     <input type ="text" id="check" name="form_check" min=10 max=50 step=2> <br>
 
-    <input type="button" onclick="checkPainter()" value="Check the guess">
+    <input type="button" class ="btn btn-primary"onclick="checkPainter()" value="Check the guess">
 
 </form>
 <br>
 <div class="container">
-    <img src="lilac.jpg" id="img" alt="lilac plant" height="100px" width="100px" onclick="selectImage()">
+    <img src="lilac.jpg" id="img" alt="plant image" height="100px" width="100px" onclick="selectImage()">
 </div>
 
 <p id="result">Result </p>
@@ -40,7 +40,12 @@ function checkPainter(){
     if(password==check){
         alert("You got it right")
         good=good+1
-    } else {
+    } 
+    else if (oops >= 10) {
+        document.getElementById("btn").onclick = giveAlert();             
+        oops=oops+1
+   }
+    else {
         oops=oops+1
         alert('Sorry')
     }
@@ -64,6 +69,10 @@ function selectImage(){
             break;
     }
 }
+
+function giveAlert() {
+            alert("Sorry, ran out of guesses.");
+        }
 </script>
 </body>
 </html> 
