@@ -17,7 +17,7 @@
 
 <p id="result">This text will be replaced </p>
 <form>
-    <input type="radio" id="average" name="calculations" onclick="chooseOp()" value="mean"  checked >
+    <input type="radio" id="average" name="calculations" onclick="chooseOp()" value="mean" >
     <label for="average">average</label>
     <br>
     <input type="radio" id="max" name="calculations" onclick="chooseOp()" value="maximum">
@@ -32,6 +32,7 @@
 function convert(){
     base = document.getElementById("base").value
     ele = document.getElementById("conv").value
+    
     toShow=''    
     out = document.getElementById("result")
     for(let i=0;i<5;i++){     
@@ -53,7 +54,7 @@ function chooseOp(){
     else if (max) {
         ans = Math.max(base,ele);
     }
-    else if(min){
+    else{
         ans = Math.min(base,ele);
     }
     document.getElementById("result1").innerHTML = ans}

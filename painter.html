@@ -20,7 +20,7 @@
 </form>
 <br>
 <div class="container">
-    <img src="lilac.jpg" id="img" alt="plant image" height="100px" width="100px" onclick="selectImage()">
+    <img src="lilac.jpg" class="img-thumbnail" id="img" alt="plant image" height="100px" width="100px" onclick="selectImage()">
 </div>
 
 <p id="result">Result </p>
@@ -50,9 +50,7 @@ function checkPainter(){
         alert('Sorry')
     }
     out.innerHTML ="Right count: " +good+" Wrong count: "+oops
-
 }
-
 function selectImage(){
     switch (useImage){
         case 1:
